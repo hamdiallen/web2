@@ -1,0 +1,135 @@
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Center Logo */
+.center-logo img {
+    width: 300px;
+    transition: transform 0.3s ease, filter 0.5s;
+    animation: pulse 2s infinite alternate;
+    cursor: pointer;
+}
+
+.center-logo img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px #00ff00);
+}
+
+/* Animation */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, #00ff00, #005500);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.login-button:hover {
+    background: linear-gradient(90deg, #ff0000, #550000);
+}
+
+.register-button:hover {
+    background: linear-gradient(90deg, #ff00ff, #550055);
+}
+
+/* Profile Icon */
+.profile-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+}
+
+.profile-icon img {
+    width: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-icon img:hover {
+    transform: rotate(360deg) scale(1.2);
+    box-shadow: 0 0 25px rgba(100, 0, 255, 0.8);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    background: #222;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #550055;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .center-logo img {
+        width: 200px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .profile-icon img {
+        width: 80px;
+    }
+
+    .dropdown-menu {
+        top: 90px;
+    }
+}
